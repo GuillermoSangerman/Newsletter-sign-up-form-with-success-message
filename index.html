@@ -9,31 +9,37 @@
     <script src="./script/main.js" defer></script>
   </head>
   <body>
-    <div class="container" >
-      <div><img class="image_mobile " src="./assets/images/illustration-sign-up-mobile.svg" alt="imagen de agenda"></div>
-      <div class="text my-4">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <div class="container-fluid w-100 d-flex flex-column m-0 flex-md-row-reverse bg-white mx-md-auto my-md-auto" >
+      <div class="py-md-3"><img class="image_mobile w-100 m-0 d-md-none" src="./assets/images/illustration-sign-up-mobile.svg" alt="imagen de agenda">
+        <img class="image_desktop d-none d-md-block" src="./assets/images/illustration-sign-up-desktop.svg" alt="imagen de agenda">
+      </div>
+      <div class="text my-4 w-100">
+        <h1 class="headText w-100 mx-3 mt-md-5 mx-md-5">Stay updated!</h1>
+        <p class="pText ms-2 fs-5 mt-3 mx-md-5">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
+          <li class="list-text mt-3 ms-2 me-5 ps-2 fs-5 ">Product discovery and building what matters</li>
+          <li class="list-text mt-3 ms-2 me-5 ps-2 fs-5 ">Measuring to ensure updates are a success</li>
+          <li class="list-text mt-3 ms-2 me-5 ps-2 fs-5 ">And much more!</li>
         </ul>
-        <div class="email my-4 ">
-        <label for="subscribe">Email address</label>
-        <input type="text" class="subs" id="subs" placeholder="    email@company.com">
-        <button class="boton my-4 " type="button">Subscribe to monthly newsletter</button>
+        <div class="email m-2 mx-md-5">
+        <label class="lemail mb-1 ms-2" for="subs">Email address</label>
+        <input type="text" class="subs w-100 ps-4" id="subs" placeholder="email@company.com">
+        <button class="boton my-4 w-100 fs-5" type="button">Subscribe to monthly newsletter</button>
       </div>
       </div>
     </div>
-    <div class="success mx-3" style="display: none;">
-      <h1 class="hSuccess"><img src="./assets/images/icon-success.svg" alt="imagen de bien hecho"><br><br>
+    <div class="container-fluid m-1 w-auto bg-white d-flex flex-column justify-content-center d-none" >
+      <div class="bg-white text-white c1">container only</div>
+      <div class="">
+      <figure class="mt-0" ><img src="./assets/images/icon-success.svg" alt="imagen de bien hecho"></figure>
+      <h1 class="hSuccess mt-5">
         Thanks for subscribing!</h1>
-      <p class="pSuccess">  A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+      <p class="pSuccess mt-4">  A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
         Please open it and click the button inside to confirm your subscription.</p>
-        <button class="bSuccess" type="button">Dismiss message</button>
-    
-
+      </div>
+        <div class="fixed-bottom mb-5 mx-4">
+        <button class="bSuccess fs-4 text-white w-100" type="button">Dismiss message</button>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </div>
   </body>
