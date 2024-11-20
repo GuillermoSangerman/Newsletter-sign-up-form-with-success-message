@@ -16,6 +16,9 @@
 .c1{
     height: 150px;
 }
+.c2{
+    height: 290px;
+}
 .subs {
     border-radius: 8px;
     border-color:  #e1e1e1;
@@ -58,5 +61,10 @@
     }
     .list-text{
         font-size: 1rem !important;
+    }
+    .container-success{
+        max-width: 500px !important;
+        max-height: 600px !important;
+        border-radius: 25px !important;
     }
 }
