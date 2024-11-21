@@ -13,17 +13,34 @@
 .lemail {
     font-weight: bold;
 }
-.c1{
-    height: 150px;
-}
+
 .c2{
-    height: 290px;
+    height: 400px;
 }
-.subs {
+.correo {
     border-radius: 8px;
-    border-color:  #e1e1e1;
     height: 4rem;
 }
+.correo-success{
+    background-color: aliceblue;
+}
+.labelEmail{
+    justify-content: space-between;
+}
+.error{
+    font-size: .9rem;
+    display: none;
+}
+.error-active{
+    color: #bb2929;
+    display: block;
+}
+.input-error{
+    background-color: #bb2929;
+    color: #ff0000;
+    opacity: 40%;
+}
+
 .boton {
     background-color: rgb(15, 15, 66);
     color: white;
@@ -64,7 +81,10 @@
     }
     .container-success{
         max-width: 500px !important;
-        max-height: 600px !important;
+        max-height: 350px !important;
         border-radius: 25px !important;
+    }
+    .modal{
+        border-radius: 50px !important;
     }
 }
