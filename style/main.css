@@ -15,8 +15,11 @@
 .lemail {
     font-weight: bold;
 }
+.c1{
+    height: 30%;
+}
 .c2{
-    height: 400px;
+    height: 60%;
 }
 .correo {
     border-radius: 8px;
