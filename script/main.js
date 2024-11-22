@@ -13,9 +13,6 @@ const expresiones = {
 const campos = {
     correo: false
 }
-//Contenido de mi Input correo
-miinput.addEventListener('keyup', validarFormulario);
-miinput.addEventListener('blur', validarFormulario);
 // funciones 
 const validarFormulario = (e) => {
     // console.log(e.target.name);
@@ -35,6 +32,9 @@ const validarFormulario = (e) => {
 
 	}
 }
+//Contenido de mi Input correo
+miinput.addEventListener('keyup', validarFormulario);
+miinput.addEventListener('blur', validarFormulario);
 function toggleModal() {
     modalAll.classList.toggle('d-none');
 }
