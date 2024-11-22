@@ -1,8 +1,10 @@
+/*Biblia*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+/* Modo Mobile */
 .headText {
     font-size: 2.5rem;
     font-weight: bold;
@@ -13,7 +15,6 @@
 .lemail {
     font-weight: bold;
 }
-
 .c2{
     height: 400px;
 }
@@ -27,25 +28,20 @@
 .labelEmail{
     justify-content: space-between;
 }
-.error{
-    font-size: .9rem;
-    display: none;
-}
-.error-active{
-    color: #bb2929;
-    display: block;
-}
-.input-error{
-    background-color: #bb2929;
-    color: #ff0000;
-    opacity: 40%;
-}
-
 .boton {
     background-color: rgb(15, 15, 66);
     color: white;
     border-radius: 10px;
     height: 4rem;
+}
+.boton:focus,
+.boton:hover{
+    background: linear-gradient(
+    90deg,
+    rgba(255, 83, 123, 1) 0%,
+    rgba(255, 105, 58, 1) 100%
+  );
+  color: white;
 }
 .hSuccess {
  font-size: 3rem;
@@ -57,8 +53,33 @@
     height: 4rem;
 
 }
+.bSuccess:focus,
+.bSuccess:hover{
+    background: linear-gradient(
+    90deg,
+    rgba(255, 83, 123, 1) 0%,
+    rgba(255, 105, 58, 1) 100%
+  );
+  color: white;
+}
+/* Estilos de invalidacion */
+.error{
+    font-size: .9rem;
+    display: none;
+}
+.error-active{
+    color: hsl(4, 100%, 67%);
+    display: block;
+}
+.input-error{
+    background-color: hsla(4, 100%, 67%, 0.338);
+    border-color: hsla(4, 100%, 67%, 0.4);
+    color: hsl(4, 100%, 67%);
+}
+/* Modo Desktop */
 @media (min-width:769px) {
     .container-fluid{
+        margin-top: 5rem !important;
         max-width: 900px !important;
         max-height: 600px !important;
         border-radius: 25px;
@@ -80,11 +101,9 @@
         font-size: 1rem !important;
     }
     .container-success{
-        max-width: 500px !important;
-        max-height: 350px !important;
-        border-radius: 25px !important;
+        max-width: 500px;
+        max-height: 500px;
+        border-radius: 40px !important;
     }
-    .modal{
-        border-radius: 50px !important;
-    }
+    
 }

@@ -1,17 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Boletin de noticias</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/main.css">
-    <script src="./script/main.js" defer></script>
-  </head>
-  <body>
-    <div id="contenedor" class="container-fluid w-100 d-flex flex-column m-0 flex-md-row-reverse bg-white mx-md-auto my-md-auto " >
-      <div class="py-md-3"><img class="image_mobile w-100 m-0 d-md-none" src="./assets/images/illustration-sign-up-mobile.svg" alt="imagen de agenda">
-        <img class="image_desktop d-none d-md-block" src="./assets/images/illustration-sign-up-desktop.svg" alt="imagen de agenda">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boletin de noticias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/main.css">
+  <script src="./script/main.js" defer></script>
+</head>
+<body>
+  <!-- Fotmulario principal -->
+  <form id="form">
+    <div id="contenedor" class="container-fluid w-100 d-flex flex-column m-0 flex-md-row-reverse bg-white mx-md-auto ">
+      <div class="py-md-3"><img class="image_mobile w-100 m-0 d-md-none"
+          src="./assets/images/illustration-sign-up-mobile.svg" alt="imagen de agenda">
+        <img class="image_desktop d-none d-md-block" src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="imagen de agenda">
       </div>
       <div class="text my-4 w-100">
         <h1 class="headText w-100 mx-3 mt-md-0 mx-md-5">Stay updated!</h1>
@@ -23,44 +28,34 @@
         </ul>
         <div class="email m-2 mx-md-5">
           <div class="d-flex labelEmail">
-        <label class="lemail mb-1 ms-2" for="correo">Email address</label>
-        <h6 for="correo" class="error ">Valid email required</h6>
-      </div>
-        <input type="email" class="correo w-100 ps-4 is-invalid" id="correo" name="correo" placeholder="email@company.com"/>
-        <button id="miBoton" class="boton my-4 w-100 fs-5 btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="submit ">Subscribe to monthly newsletter</button> 
-      </div>
-      </div>
-    </div>
-    <div  class="modal fade d-none" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen-md-down">
-        <div class="modal-content">
-          <div class="modal-body ">
-            <div>
-            <div  class="container-success mt-4 m-0 w-auto bg-white d-flex flex-column justify-content-center mt-md-0 mx-md-auto"  >
-              <figure class=" mx-md-5 " ><img src="./assets/images/icon-success.svg" alt="imagen de bien hecho"></figure>
-              <h1 class="hSuccess mx-md-5">
-                Thanks for subscribing!</h1>
-              <p class="pSuccess mt-4 mx-md-5">  A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
-                Please open it and click the button inside to confirm your subscription.</p>
-              </div>
-              <div class="bg-white text-white c2 d-md-none">container only</div>
-                <div class="mb-5 mx-4 ">
-                <button id="bSuccess" class="bSuccess btn btn-outline-warning fs-4 text-white w-100 my-md-4" data-bs-dismiss="modal" type="button">Dismiss message</button>
-              </div>
-            </div>
+            <label class="lemail mb-1 ms-2" for="correo">Email address</label>
+            <h6 for="correo" class="error ">Valid email required</h6>
           </div>
+          <input type="email" class="correo w-100 ps-4 is-invalid" id="correo" name="correo"
+            placeholder="email@company.com" />
+          <button id="miBoton" class="boton my-4 w-100 fs-5 " type="button">Subscribe to monthly newsletter</button>
         </div>
       </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </form>
   </div>
-  </body>
+  <!-- Mi Modal -->
+  <div id="modal" class="bg-dark bg-opacity-25 w-100 vh-100 position-fixed top-0 start-0 d-flex justify-content-center 
+      align-items-center d-none">
+    <div class="container-success bg-body-secondary modal-content p-3 rounded-3">
+      <figure class=" mx-md-5 "><img src="./assets/images/icon-success.svg" alt="imagen de bien hecho"></figure>
+      <h1 class="hSuccess mx-md-5">Thanks for subscribing!</h1>
+      <p class="pSuccess mt-4 mx-md-5">
+        A confirmation email has been sent to <strong><output id="correoRecibido"></output></strong>.
+        Please open it and click the button inside to confirm your subscription.</p>
+      <div class="bg-white text-white c2 d-md-none">container only</div>
+      <div class="mb-5 mx-4 ">
+        <button id="bSuccess" class="bSuccess fs-4 text-white w-100 my-md-4" type="button">Dismiss message</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  </div>
+</body>
 </html>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body> -->
